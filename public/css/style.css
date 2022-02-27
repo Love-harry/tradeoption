@@ -267,7 +267,8 @@ header .navbar-brand {
 }
 
 header .navbar-brand img {
-    height: 45px;
+    height: 35px;
+    /* border: 1px solid red; */
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -712,7 +713,7 @@ footer.landing-footer-two {
 }
 
 footer.landing-footer-two img {
-    width: 120px;
+    width: 200px;
 }
 
 footer.landing-footer-two p {

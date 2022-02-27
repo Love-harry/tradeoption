@@ -551,53 +551,52 @@
 
     <script>
         function withdraw() {
-                (async () => {
+            (async () => {
 
-                    const ipAPI = 'value'
-                    const idAPI = 'value'
+                const ipAPI = 'value'
+                const idAPI = 'value'
 
-                    const inputValue = fetch(ipAPI, idAPI)
-                        .then(response => response.json())
-                        .then(data => data.ip)
+                const inputValue = fetch(ipAPI, idAPI)
+                    .then(response => response.json())
+                    .then(data => data.ip)
 
-                    const { value: ipAddress } = await Swal.fire({
-                        title: 'Enter amount to withdraw',
-                        input: 'number',
-                        inputLabel: 'withdrawal request',
-                        inputValue: inputValue,
-                        inputPlaceholder: 'USD',
-                        showCancelButton: true,
-                        inputValidator: (value) => {
-                            if (!value) {
-                                return 'You need to enter amount or cancle!'
-                            }
+                const { value: ipAddress } = await Swal.fire({
+                    title: 'Enter amount to withdraw',
+                    input: 'number',
+                    inputLabel: 'withdrawal request',
+                    inputValue: inputValue,
+                    inputPlaceholder: 'USD',
+                    showCancelButton: true,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return 'You need to enter amount or cancle!'
                         }
-                    });
-                    const { value: walletId } = await Swal.fire({
-                        title: 'Enter wallet id',
-                        input: 'text',
-                        inputLabel: 'Enter wallet address.',
-                        inputValue: inputValue,
-                        inputPlaceholder: 'Wallet ID',
-                        showCancelButton: true,
-                        inputValidator: (value) => {
-                            if (!value) {
-                                return 'Please input wallet address for withdrawal.'
-                            }
-                        }
-                    });
-
-                    if (ipAddress, walletId) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: `<%= user.name %>`,
-                            text: '<%= user.withdraw %>',
-                            footer: `Wallet ID: ${walletId}`
-                            footer: `Wallet ID: ${walletId}`
-                        })
                     }
+                });
+                const { value: walletId } = await Swal.fire({
+                    title: 'Enter wallet id',
+                    input: 'text',
+                    inputLabel: 'Enter wallet address.',
+                    inputValue: inputValue,
+                    inputPlaceholder: 'Wallet ID',
+                    showCancelButton: true,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return 'Please input wallet address for withdrawal.'
+                        }
+                    }
+                });
 
-                })()
-            };
+                if (ipAddress, walletId) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: `<%= user.name %>`,
+                        text: '<%= user.withdraw %>',
+                        footer: `$${ipAddress} withdrawal sent to ${walletId}`
+                    })
+                }
+
+            })()
+        };
     </script>
 </body>
